@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="org.hww.yy_chapter"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        >
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:launchMode="standard">
+
+        </activity>
+        <activity
+            android:name=".ThirdActivity">
+            <intent-filter>
+                <action android:name="org.me.chapter1.a"/>
+                <action android:name="org.me.chapter1.b"/>
+
+                <category android:name="org.me.chapter.cate1"/>
+                <category android:name="ogr.me.chapter.cate2"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <!--<data android:mimeType="image/*"/>-->
+                <data android:mimeType="audio/mpeg" android:scheme="http"/>
+
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
